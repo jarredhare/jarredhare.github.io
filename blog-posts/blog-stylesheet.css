@@ -76,4 +76,6 @@ a:link,a:visited{
   float:right;
   padding-right:20%;
   padding-bottom: 50px;
+  font-weight: bold;
+  font-size: 1.1em;
 }

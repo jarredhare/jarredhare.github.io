@@ -1,0 +1,48 @@
+p {
+ padding: 10px;
+ }
+ .header{
+ font-family:Geneva;
+ text-align:center;
+ background-color: orange;
+ }
+ .header h2{
+     margin-top:0;
+ }
+ .header h3{
+     margin-bottom:0;
+ }
+
+ .left{
+ float:left;
+ width:50%;
+ background-color:blue;
+ height:400px;
+ color:white;
+ }
+ .left h3{
+     text-align:center;
+     color:yellow;
+ }
+ .left img {
+     display: block;
+     margin: 0 auto;
+     height: 100px;
+ }
+ .right{
+ width:50%;
+ float:right;
+ background-color:green;
+ height:400px;
+ color:white;
+ }
+ .right h3{
+     text-align:center;
+ }
+ .compare{
+     clear:both;
+     background-color:red;
+ }
+ .compare h3{
+     text-align:center;
+ }

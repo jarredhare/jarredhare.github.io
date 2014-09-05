@@ -46,3 +46,12 @@ p {
  .compare h3{
      text-align:center;
  }
+ .reflect{
+     background-color:silver;
+     color:black;
+     border:dashed black 2px;
+ }
+ .reflect h3{
+     text-align:center;
+     margin-top:0;
+ }

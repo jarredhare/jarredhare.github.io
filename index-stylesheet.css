@@ -71,7 +71,7 @@ h2{
   position: fixed;
   border-bottom: black dotted 2px;
   z-index: 1;
-  min-width: 750px;
+  min-width: 520px;
 }
 .bar p{
   /* position:absolute; */
@@ -125,3 +125,9 @@ a:link,a:visited{
   font-weight: bold;
   font-size: 1.1em;
 }*/
+
+@media screen and (max-width: 1150px){
+  .bar div{
+    display:none;
+  }
+}

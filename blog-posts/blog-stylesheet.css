@@ -87,7 +87,9 @@ ul{
   float: left;
   clear: right;
   font-family:Arial;
+  padding:10px;
 }
+
 #date{
   display: inline-block;
   width: 75%;

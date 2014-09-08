@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Boldly Go Coding: DBC Blog</title>
+    <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+  <div id="wrapper">
+    <div class="bar">
+      <a href="../index.html"><img src="../imgs/icon.png"></a>
+      <p>JARRED J. HARE</p>
+      <h2>Classes vs. Ids</h2><!--TITLE OF THE BLOG HERE-->
+      <div class="links">
+        <a href="../aboutme/aboutme.html">About Me</a>
+        <a href="../blog-posts/blogindex.html">Blog</a>
+        <a href="../projects/projectsindex.html">Projects</a>
+        <a href="../contact/contact.html">Contact</a>
+      </div>
+    </div>
+    <div id="main">
+      <div id="sidebar">
+        <div id="social">
+        <a href="https://www.facebook.com/jarred.hare.9"><img src="../imgs/facebook.png" /></a>
+        <a href="https://www.linkedin.com/pub/jarred-hare/4a/940/9b6"><img src="../imgs/linkedin.png" /></a>
+        <a href="https://twitter.com/Jighare"><img src="../imgs/twitter.png" /></a>
+        <a href="https://plus.google.com/u/0/118050296024401533666/about"><img src="../imgs/googleplus.png" /></a>
+        </div>
+      </div>
+
+      <div id="date">
+        <p>September 7, 2014</p><!--TODAYS DATE GOES HERE-->
+      </div>
+      <div id="blog">
+       <p>For our technical blog this week we were given an array of topics to choose from and told to research and write about one of them. I chose to write about the best practices associating with using classes and ids almost entirely because I am still confused on how the two differ. Thus far my knowledge of them extends just far enough to know that classes are used for multiple elements and ids are used for a single element. Hopefully after reading this post I will have explained what each are in full and how to best utilize them.</p>
+       <p>I should first start by explaining what classes and ids are used for. They are generally needed to apply styles to only certain tags in your HTML document by referring to them in the CSS. For example, instead of applying style to all of the < p > tags on your site you could assign certain tags to classes or an id and then assign the changes there. You can see in the image below an example of assigning a div to the links class in this site.</p>
+       <div id="image">
+       <img src="../imgs/class-assign.png" style="clear: right;width:95%">
+       </div>
+       <p>Like I stated before classes can be used for many different elements in your HTML. This is very similar to products at the store that have a barcode. The barcode is shared between all products of the same kind. Id's are much more similar to the serial number. Each Id is unique to that one element and should not be repeated anywhere else. As far as CSS is concerned though, they behave in almost the exact same way. The only difference is that on the CSS page classes are referred to with a "#". Like for the class "footer" you would use "#footer"  and then assign the styles. Id's use a "." instead and in that example would be referred to as ".footer".</p>
+       <div id="image" style="text-align:center">
+       <img src="../imgs/css-class-id.png" style="clear: right; width:40%;">
+       </div>
+       <p>The differences arise in a few specific cases. The first is that Id's can be used as a method to jump to that specific element on a page. This is done by adding "#id" where id is the specific id being used to the end of the URL. Since this will jump down it is important that only one element exists with that id so the browser knows where to go. The other major difference actually concerns functionality with JavaScript. We start diving into JS next week so I am not 100% sure on how important this is but some of the functions require that only one element on the page corresponds to a specific id like getElementById(). Hopefully I will learn more about this soon.</p>
+       <p>So in terms of best practices it seems like I was already on the right track. When you have groups of elements that need similar styling, classes are the way to go. For referring to one element an id should be used. The jump down ability of classes was news to me and something I hope to integrate into my own sites from now on.
+
+      </div>
+
+
+    </div><!--end of main div-->
+    <div id="footer">
+      <div class="links">
+        <a href="../aboutme/aboutme.html">About Me</a>
+        <a href="../blog-posts/blogindex.html">Blog</a>
+        <a href="../projects/projectsindex.html">Projects</a>
+        <a href="../contact/contact.html">Contact</a>
+      </div>
+      </div>
+
+  </div><!--end of wrapper div-->
+  </body>
+</html>

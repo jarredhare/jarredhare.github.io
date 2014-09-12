@@ -17,9 +17,9 @@ h2{
 h3{
   text-decoration: underline;
 }
-ul{
+/*ul{
    list-style-type: none;
-}
+}*/
 #social{
   margin:10px;
   text-align: center;
@@ -92,7 +92,10 @@ ul{
   font-family:Arial;
   padding:10px;
 }
-
+#blog img{
+  border: silver solid 3px;
+  margin:10px;
+}
 #date{
   display: inline-block;
   width: 75%;

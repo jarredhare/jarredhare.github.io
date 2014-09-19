@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Boldly Go Coding: DBC Blog</title>
+    <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+  <div id="wrapper">
+    <div class="bar">
+      <a href="../index.html"><img src="../imgs/icon.png"></a>
+      <p>JARRED J. HARE</p>
+      <h2>The group_by Method</h2><!--TITLE OF THE BLOG HERE-->
+      <div class="links">
+        <a href="../aboutme/aboutme.html">About Me</a>
+        <a href="../blog-posts/blogindex.html">Blog</a>
+        <a href="../projects/projectsindex.html">Projects</a>
+        <a href="../contact/contact.html">Contact</a>
+      </div>
+    </div>
+    <div id="main">
+      <div id="sidebar">
+        <div id="social">
+        <a href="https://www.facebook.com/jarred.hare.9"><img src="../imgs/facebook.png" /></a>
+        <a href="https://www.linkedin.com/pub/jarred-hare/4a/940/9b6"><img src="../imgs/linkedin.png" /></a>
+        <a href="https://twitter.com/Jighare"><img src="../imgs/twitter.png" /></a>
+        <a href="https://plus.google.com/u/0/118050296024401533666/about"><img src="../imgs/googleplus.png" /></a>
+        </div>
+      </div>
+
+      <div id="date">
+        <p>September 19th, 2014</p><!--TODAYS DATE GOES HERE-->
+      </div>
+
+      <div id="blog">
+        <p>Looking over the possible topics for these weeks blog I noticed there were like 5 or 6 topics and I was really familiar with nearly all of them. However the group_by method I had literally never seen before so clearly it is the perfect thing for me to publicly share my knowledge on! Just let me consult ruby-doc and irb for a few minutes and get back to you...</p>
+
+        <p>OK, so that wasn't so hard. It looked a little weird at first in the documentation but pretty much everything does until I try it out a few times in irb. Since this blog is meant for someone with relatively little experience with Ruby, I will walk through my own thought process in learning to use this method. First off, here's the description courtesy of ruby-doc.org:</p>
+
+        <div id="image">
+          <img src="../imgs/group_desc.png" />
+        </div>
+
+        <p>So for me, it is not at all obvious what that means. There are parts that make sense and others that are a little tougher to reason out. I mean clearly it is a method that is used on a "collection" which is already kind of vague. What qualifies as a collection? Hash/Array/Range or maybe all three, so that is something we need to look into. Then it says it groups this collection by the result of a code "block" and returns a Hash of keys and values. The keys and values are defined above but it will be a lot easier to explain with some example code.</p>
+
+        <p>The basic example that I found on multiple sites is this:</p>
+        <div id="image">
+          <img src="../imgs/group_by.png" />
+        </div>
+        <p>Seems a little odd at first but it's really not bad once you walk through it. The group_by method takes the range from 1-6 and for each of those values applies the code block on the right. The block is between the curly brackets {}. In this case the block is taking the modulo or remainder of dividing each number by 3 and then grouping things with the same result. So in this example 4 % 3 is equal to 1 and 1 % 3 is also equal to 1. So 1 and 4 are the values associated with the key 1. It does the same for all other members of the range 1-6. It groups these in the output hash which comes after the # which is a comment in this example. </p>
+
+        <p>The last thing is that this method does work on various data structures. In irb I tested it with hashes, arrays, and just simple ranges like the example we used and they all work. It gets a little complicated with hashes but it's all the same basic principle.</p>
+
+
+
+
+      </div>
+
+
+    </div><!--end of main div-->
+    <div id="footer">
+      <div class="links">
+        <a href="../aboutme/aboutme.html">About Me</a>
+        <a href="../blog-posts/blogindex.html">Blog</a>
+        <a href="../projects/projectsindex.html">Projects</a>
+        <a href="../contact/contact.html">Contact</a>
+      </div>
+      </div>
+
+  </div><!--end of wrapper div-->
+  </body>
+</html>

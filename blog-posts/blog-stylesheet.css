@@ -95,6 +95,7 @@ h3{
 #blog img{
   border: silver solid 3px;
   margin:10px;
+  width:100%;
 }
 #date{
   display: inline-block;

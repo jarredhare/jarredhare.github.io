@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Boldly Go Coding: DBC Blog</title>
+    <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+  <div id="wrapper">
+    <div class="bar">
+      <a href="../index.html"><img src="../imgs/icon.png"></a>
+      <p>JARRED J. HARE</p>
+      <h2>Ruby Class Intro</h2><!--TITLE OF THE BLOG HERE-->
+      <div class="links">
+        <a href="../aboutme/aboutme.html">About Me</a>
+        <a href="../blog-posts/blogindex.html">Blog</a>
+        <a href="../projects/projectsindex.html">Projects</a>
+        <a href="../contact/contact.html">Contact</a>
+      </div>
+    </div>
+    <div id="main">
+      <div id="sidebar">
+        <div id="social">
+        <a href="https://www.facebook.com/jarred.hare.9"><img src="../imgs/facebook.png" /></a>
+        <a href="https://www.linkedin.com/pub/jarred-hare/4a/940/9b6"><img src="../imgs/linkedin.png" /></a>
+        <a href="https://twitter.com/Jighare"><img src="../imgs/twitter.png" /></a>
+        <a href="https://plus.google.com/u/0/118050296024401533666/about"><img src="../imgs/googleplus.png" /></a>
+        </div>
+      </div>
+
+      <div id="date">
+        <p>September 25th, 2014</p><!--TODAYS DATE GOES HERE-->
+      </div>
+
+      <div id="blog">
+        <p>This week at DBC we really began to dive into using classes in Ruby. I think this was really new to most of us but is looking like an incredibly useful tool. First let's talk about what classes are. Since everything in Ruby is pretty much an object, we can think of classes as the blueprints from which these objects are created. If we wanted to get technical we could say that an object is an instance of a class. An easy way to think about this is to say your car is an instance of the class cars. Most cars have the same characteristics but differ on the value of these things. Size of the engine and fuel capactiy for example. These attributes are shared between the cars but their exact number may be different.</p>
+
+        <p>I have written out a new class called Book in the image below so we can dive into and discuss each part of creating a new class in Ruby. After defining the name of the class the first thing you see is the initialize section on line 2. The words in orange there are the attributes of our class and need to be stated when we define a new object. On line 15 when we create an new instance of the book class you can see where the attributes for the book The Way of Kings are passed in to the new object. Great book btw, I recommend anything by Sanderson.</p>
+
+        <div id="image">
+          <img src="../imgs/class.png" />
+        </div>
+
+        <p>The next section of the code you will notice is where we are creating instance variables. An instance variable begins with a "@" symbol and is available anywhere in the class like in the favorite method I create after. This method does not have access to the local variable "title" but it can use the instance variable "@title". Any other methods we create inside the class can also use these instance variables. Speaking of that favorite method we created. All it really does is prints out the attributes of the book in a nice sentence. You can see it being called on our new object on line 16. The final output of our code would be:</p>
+
+        <div id="image">
+          <img src="../imgs/output.png" />
+        </div>
+
+      </p>That's pretty much the basic overview of classes in Ruby. They can get far more complicated but they all work off this basic idea outlined above. As always the best way to learn how to use them is to just get in there and start coding.</p>
+
+      </div>
+
+
+    </div><!--end of main div-->
+    <div id="footer">
+      <div class="links">
+        <a href="../aboutme/aboutme.html">About Me</a>
+        <a href="../blog-posts/blogindex.html">Blog</a>
+        <a href="../projects/projectsindex.html">Projects</a>
+        <a href="../contact/contact.html">Contact</a>
+      </div>
+      </div>
+
+  </div><!--end of wrapper div-->
+  </body>
+</html>

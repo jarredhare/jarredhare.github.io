@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Boldly Go Coding: DBC Blog</title>
+    <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+  <div id="wrapper">
+    <div class="bar">
+      <a href="../index.html"><img src="../imgs/icon.png"></a>
+      <p>JARRED J. HARE</p>
+      <h2>Inheritance vs. Composition</h2><!--TITLE OF THE BLOG HERE-->
+      <div class="links">
+        <a href="../aboutme/aboutme.html">About Me</a>
+        <a href="../blog-posts/blogindex.html">Blog</a>
+        <a href="../projects/projectsindex.html">Projects</a>
+        <a href="../contact/contact.html">Contact</a>
+      </div>
+    </div>
+    <div id="main">
+      <div id="sidebar">
+        <div id="social">
+        <a href="https://www.facebook.com/jarred.hare.9"><img src="../imgs/facebook.png" /></a>
+        <a href="https://www.linkedin.com/pub/jarred-hare/4a/940/9b6"><img src="../imgs/linkedin.png" /></a>
+        <a href="https://twitter.com/Jighare"><img src="../imgs/twitter.png" /></a>
+        <a href="https://plus.google.com/u/0/118050296024401533666/about"><img src="../imgs/googleplus.png" /></a>
+        </div>
+      </div>
+
+      <div id="date">
+        <p>September 30th, 2014</p><!--TODAYS DATE GOES HERE-->
+      </div>
+
+      <div id="blog">
+        <h3>What is Ruby inheritance?</h3>
+        <p>When creating a new class in Ruby you are able to indicate that this new class will get most or all of its features from a parent class. The child class is said to inherit traits from the parent such as general methods that you would like to apply to both. There are several ways this can be done and I will show them here with the example of cars. Since I drive a Jetta I will define a child class called Jetta that inherits traits from a parent class called Car. Simple enough. The most straightforward form of inheritance is when a method is defined in the parent but not in the child class like the method "type". An instance of the jetta class can still access this method even though it is not defined within it's class specifically.</p>
+        <div id="image" style="text-align:center">
+          <img src="../imgs/implicit.png" style="width:40%"/>
+        </div>
+        <p>Since Jetta had no type method defined inside, it just used the one inherited from the Car class. But we can also explicitly define the type method within the Jetta class and override the features inherited from Car. You can see that in this case the jetta object uses the method defined within the Jetta class. One final way that you can interact with the inheritance is the super() function that is built into Ruby. Super will get the parent class version of the method and run it when called. You can see the output here. Inheritance is generally used when there is clearly related repeated code that you can combine and distribute to all of the related classes.</p>
+        <div id="image" style="display:inline">
+          <img src="../imgs/override.png" style="width:40%"/>
+        </div>
+        <div id="image" style="display:inline">
+          <img src="../imgs/super.png" style="width:40%"/>
+        </div>
+        <h3>What is composition?</h3>
+        <p>Composition is another way to accomplish the exact same thing as inheritance. Like most things in Ruby, there is always more than one way to solve a problem. Composition actually uses another class or module in the current class as opposed to using implicit inheritance. It is most easily seen with an example here using the same classes as before. The only difference is that in this first example we need to create an instance of the car class in our initialize method and go from there.</p>
+        <div id="image" style="text-align:center">
+          <img src="../imgs/composition.png" style="width:40%"/>
+        </div>
+        <p>This final quick example shows how to once again accomplish the same thing using a module. By including the module in the class the jetta object has access to the methods defined in the module. Modules work great in cases where you want to combine and save code to be used in a lot of unrelated places.</p>
+        <div id="image" style="text-align:center">
+          <img src="../imgs/module.png" style="width:40%"/>
+        </div>
+        <h3>Which have been used this week?</h3>
+        <p>So far this week I have only been using composition. Inheritance is still a really new topic to me and I plan to try to utilize it more now that I am familiar with how it works and why it is used. </p>
+
+      </div>
+
+
+    </div><!--end of main div-->
+    <div id="footer">
+      <div class="links">
+        <a href="../aboutme/aboutme.html">About Me</a>
+        <a href="../blog-posts/blogindex.html">Blog</a>
+        <a href="../projects/projectsindex.html">Projects</a>
+        <a href="../contact/contact.html">Contact</a>
+      </div>
+    </div>
+
+  </div><!--end of wrapper div-->
+  </body>
+</html>

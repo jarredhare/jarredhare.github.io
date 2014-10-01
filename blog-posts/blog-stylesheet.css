@@ -130,10 +130,8 @@ a:link,a:visited{
   margin-left:100px;
 }
 
-/*#signature{
-  float:right;
-  padding-right:20%;
-  padding-bottom: 50px;
-  font-weight: bold;
-  font-size: 1.1em;
-} deleted this section*/
+@media screen and (max-width: 1300px){
+  .bar div{
+    display:none;
+  }
+}

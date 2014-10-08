@@ -97,6 +97,12 @@ h3{
   margin:10px;
   width:100%;
 }
+#blog code{
+  width: 75%;
+  margin: auto;
+  border-radius: 10px;
+  border:solid silver 1px;
+}
 #date{
   display: inline-block;
   width: 75%;

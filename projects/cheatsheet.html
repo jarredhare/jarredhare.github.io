@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/prism-m.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/cheatsheet.css">
+    <script src="../assets/prism.js"></script>
+    <title>Javascript Cheatsheet</title>
+  </head>
+
+  <body>
+    <h1>Javascript Cheatsheet</h1>
+    <section class="group">
+      <h2>Objects</h2>
+      <div class="example">
+        <pre><code class="language-javascript res">var person = {firstName:"Jarred", lastName:"Hare", age:25, eyeColor:"green"};</code></pre>
+        <pre><code class="language-javascript res">var person = new Object();
+person.firstName = "Jarred";
+person.lastName = "Hare";
+person.age = 25;
+person.eyeColor = "green";</code></pre>
+      </div>
+      <div class="description">
+        <p>An object in JS is essentially a container that has properties and methods associated with it. In the example here the properties of the "person" object are set using object literal notation or the constructor function.</p>
+        <p>We can easily add and refer to properties and methods to the object using the . (dot) notation. In the example we have seen we use this notation to create the firstName property on the object person.</p>
+      </div>
+    </section>
+    <hr>
+    <section class="group" >
+      <h2>Prototypes</h2>
+      <div class="example">
+        <pre><code class="language-javascript res">var Person = function Person(firstName, lastName, age, eyeColor) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+  this.eyeColor = eyeColor;
+}
+
+Person.prototype.doubleAge = function() { return this.age * 2 } </code></pre>
+      </div>
+      <div class="description">
+        <p>
+          Every function is assigned a new empty object called prototype. This object has some special treatment, the key point is that when any new object is created it inherits the properties of its constructor's prototype. Like any other object, we can assign both properties and methods to the prototype. Properties are usually defined in the constructor method whereas methods are normally defined using the prototype object.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

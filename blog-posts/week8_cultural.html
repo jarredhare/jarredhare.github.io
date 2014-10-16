@@ -4,9 +4,6 @@
     <title>To Boldly Go Coding: DBC Blog</title>
     <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
     <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/solarized_dark.min.css">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
   </head>
 
@@ -15,7 +12,7 @@
     <div class="bar">
       <a href="../index.html"><img src="../imgs/icon.png"></a>
       <p>JARRED J. HARE</p>
-      <h2>SQL Injection</h2><!--TITLE OF THE BLOG HERE-->
+      <h2>Dealing with Conflict</h2><!--TITLE OF THE BLOG HERE-->
       <div class="links">
         <a href="../aboutme/aboutme.html">About Me</a>
         <a href="../blog-posts/week8_cultural.html">Blog</a>
@@ -24,6 +21,12 @@
       </div>
     </div>
     <div id="main">
+      <div id="date">
+        <p>October 8th, 2014</p><!--TODAYS DATE GOES HERE-->
+      </div>
+
+      <div id="blog">
+      </div>
       <div id="sidebar">
         <div id="social">
         <a href="https://www.facebook.com/jarred.hare.9"><img src="../imgs/facebook.png" /></a>
@@ -31,6 +34,7 @@
         <a href="https://twitter.com/Jighare"><img src="../imgs/twitter.png" /></a>
         <a href="https://plus.google.com/u/0/118050296024401533666/about"><img src="../imgs/googleplus.png" /></a>
         </div>
+
         <ul>
           <h3>Past Blogs</h3>
   <li>Week 8</li>
@@ -76,36 +80,6 @@
             </ul>
         </ul>
       </div>
-
-      <div id="date">
-        <p>October 8th, 2014</p><!--TODAYS DATE GOES HERE-->
-      </div>
-      <div id="blog">
-        <h3>Issues with SQL</h3>
-          <p>One of the biggest issues with SQL is a cyber attack known as SQL injection. Most web applications these days work with databases containing
-            massive amounts of user/customer data. This can range from you basic name and address all the way up to your social security or bank account
-            numbers. Generally you imput this data into some pretty standard input boxes to insert items or gain access to the database. The issue is that
-            in those same input boxes clever hackers can insert SQL code to retrieve this information without needing a password. While there are many
-            different ways this can be done I will only go through a very simple case.</p>
-
-          <p>The following line of code is designed to take a username and pull up the data related to that user:</p>
-          <pre><code>statement = "SELECT * FROM users WHERE name ='" + userName + "';"</code></pre>
-          <p>Now instead of putting in a valid username, imagine the hacker inserted something like this:</p>
-          <pre><code>' or '1'='1 #===>username</code></pre>
-          <p>This would lead to the SQL being evaluated in the following way and since '1' = '1' is always going to be true this is a valid statement that
-            would return the <em>entire</em> user database.</p>
-          <pre><code>SELECT * FROM users WHERE name = '' OR '1'='1';</code></pre>
-          <p>This is clearly a pretty huge security risk especially for databases containing sensitive personal information but there are ways to mitigate it.
-            This is all new to me so I will try to summarize a few of the simpler countermeasures that new developers can use.
-            <ul>
-              <li>Prepared Statements or Stored Procedures: Instead of simply blindly passing whatever input someone has typed into directly into your SQL, this method stores the
-                input as a variable and passes it in later in the code. This ensures that a hacker can't change the intent of the code with the code he inserted.</li>
-              <li>Escaping: A less secure method is to escape the user input so the special characters that they type in their code are escaped and interpreted simply as text.This
-                is obviously a huge simplification and I would recommend anyone using SQL to research much further if they plan on keeping their database secure.</li>
-            </ul>
-      </div>
-
-
     </div><!--end of main div-->
     <div id="footer">
       <div class="links">

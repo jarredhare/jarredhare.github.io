@@ -17,9 +17,6 @@ h2{
 h3{
   text-decoration: underline;
 }
-/*ul{
-   list-style-type: none;
-}*/
 #social{
   padding: 10px 0 10px 0;
   text-align: center;
@@ -106,12 +103,12 @@ h3{
   border-radius: 10px;
   border:solid silver 1px;
 }
+#blog ol li{
+  color:white;
+  font-style: italic;
+  font-weight: bold;
+}
 #date{
-  /* display: inline-block; */
-  /* width: 75%; */
-  /* float: left; */
-  /* clear: right; */
-  /* margin-bottom: -10px; */
   position: absolute;
   margin-left: 10px;
 }

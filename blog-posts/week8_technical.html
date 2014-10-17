@@ -5,6 +5,8 @@
     <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
     <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/prism-m.css">
+    <script src="../assets/prism.js"></script>
   </head>
 
   <body>
@@ -12,20 +14,54 @@
     <div class="bar">
       <a href="../index.html"><img src="../imgs/icon.png"></a>
       <p>JARRED J. HARE</p>
-      <h2>Sorting Algorithms</h2><!--TITLE OF THE BLOG HERE-->
+      <h2>Recursion</h2><!--TITLE OF THE BLOG HERE-->
       <div class="links">
         <a href="../aboutme/aboutme.html">About Me</a>
-        <a href="../blog-posts/week8_cultural.html">Blog</a>
+        <a href="../blog-posts/week8_technical.html">Blog</a>
         <a href="../projects/projectsindex.html">Projects</a>
         <a href="../contact/contact.html">Contact</a>
       </div>
     </div>
     <div id="main">
       <div id="date">
-        <p>October 8th, 2014</p><!--TODAYS DATE GOES HERE-->
+        <p>October 17th, 2014</p><!--TODAYS DATE GOES HERE-->
       </div>
 
       <div id="blog">
+        <p>When I started messing around with programming at the start of my DBC prep, I ran into recursion a few times and was pretty confused as to just what was happening. Somehow by using recursion my incredibly convoluted solution to a problem that involved loops within loops could be solved in like 3 lines. I didn't really understand how it worked at the time so I decided to take this oppurtunity to research it a bit and give a basic overview of simple recursion.</p>
+        <p>Now recursion is something that is used in lots of programming languages, but for the sake of simplicity I will use examples done in Ruby. So to start off, what is recursion. Basically it is when a function or method calls itself within its definition. That sounds kind of like using a word in its own definition so let me show you an example of how a countdown can be done recursively.</p>
+        <pre><code class="language-ruby">def countdown(n)
+  return if n == 0       #base case where the method does not call itself
+  puts n
+  countdown(n-1)         #recursive method call to get closer to the base case each time
+end
+
+countdown(4)             #our output
+4
+3
+2
+1</code></pre>
+        <p>You can see that within the countdown method, it calls itself with the new argument n-1. At the top of the method we have a return if n is equal to 0. This is our base case and will allow to method to stop running when our countdown reaches 0. The key to recursion is that you must have a base case where the method will end and your recursive method call must get you closer to that base case each time.</p>
+        <p>Now this is an extremely simple case and recursion can be used for countless others that are far more complex. Common examples include a factorial method or one that prints out the fibonacci sequence. I'll show that example below to show something slightly more complex.</p>
+        <pre><code class="language-ruby">def fibonnaci(n)
+  return n if n <= 1
+  fibonnaci(n-1) + fibonnaci(n-2) if n > 1
+end</code></pre>
+      <p>Here the base case is just adding up 1's and 0's. You can see this in the return statement at the beginning that just returns any number less than 2. The recursive part is only slightly more complicated than before since we have 2 calls to the method now. Since we subtract 1 or 2 on each call we get closer and closer to the base case of adding just 1's and 0's. The output to the code when run for the first 10 numbers in the sequence would be:</p>
+      <pre><code class="language-ruby">for x in (1..10)
+  puts fibonnaci(x)
+end
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55</code></pre>
+        <p>And that is an intro to recursion. It seems pretty simple to understand at a high level but I still have a really hard time identifying cases where I should use it. My brain just doesn't jump to that way of thinking yet so I have to really try to shift my mindset and think outside my comfort zone.</p>
       </div>
       <div id="sidebar">
         <div id="social">
@@ -39,7 +75,7 @@
           <h3>Past Blogs</h3>
   <li>Week 8</li>
     <ul>
-      <li><a href="week8_technical.html">Sorting Algorithms</a></li>
+      <li><a href="week8_technical.html">Recursion</a></li>
       <li><a href="week8_cultural.html">Dealing with Conflict</a></li>
     </ul>
           <li>Week 7</li>
@@ -84,7 +120,7 @@
     <div id="footer">
       <div class="links">
         <a href="../aboutme/aboutme.html">About Me</a>
-        <a href="../blog-posts/week8_cultural.html">Blog</a>
+        <a href="../blog-posts/week8_technical.html">Blog</a>
         <a href="../projects/projectsindex.html">Projects</a>
         <a href="../contact/contact.html">Contact</a>
       </div>

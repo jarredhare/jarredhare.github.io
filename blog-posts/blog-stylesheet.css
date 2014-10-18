@@ -90,7 +90,12 @@ h3{
   float: left;
   /* clear: left; */
   font-family:Arial;
-  padding: 25px 10px 10px 10px;
+  padding: 25px 10px 10px 25px;
+}
+#blog pre{
+  width:75%;
+  margin:auto;
+  border:silver solid 1px;
 }
 #blog img{
   border: silver solid 3px;

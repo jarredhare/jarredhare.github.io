@@ -4,9 +4,8 @@
     <title>To Boldly Go Coding: DBC Blog</title>
     <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
     <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/solarized_dark.min.css">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/prism-m.css">
+    <script src="../assets/prism.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
   </head>
 
@@ -89,12 +88,12 @@
             different ways this can be done I will only go through a very simple case.</p>
 
           <p>The following line of code is designed to take a username and pull up the data related to that user:</p>
-          <pre><code>statement = "SELECT * FROM users WHERE name ='" + userName + "';"</code></pre>
+          <pre><code class="language-sql">statement = "SELECT * FROM users WHERE name ='" + userName + "';"</code></pre>
           <p>Now instead of putting in a valid username, imagine the hacker inserted something like this:</p>
-          <pre><code>' or '1'='1 #===>username</code></pre>
+          <pre><code class="language-sql">' or '1'='1 #===>username</code></pre>
           <p>This would lead to the SQL being evaluated in the following way and since '1' = '1' is always going to be true this is a valid statement that
             would return the <em>entire</em> user database.</p>
-          <pre><code>SELECT * FROM users WHERE name = '' OR '1'='1';</code></pre>
+          <pre><code class="language-sql">SELECT * FROM users WHERE name = '' OR '1'='1';</code></pre>
           <p>This is clearly a pretty huge security risk especially for databases containing sensitive personal information but there are ways to mitigate it.
             This is all new to me so I will try to summarize a few of the simpler countermeasures that new developers can use.
             <ul>

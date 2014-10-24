@@ -99,7 +99,7 @@ h3{
 }
 #blog img{
   border: silver solid 3px;
-  margin:10px;
+  margin:10px 20px 10px 10px;
   width:100%;
 }
 #blog code{
